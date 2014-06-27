@@ -1,0 +1,22 @@
+{
+  "name": "whyd",
+  "version": "0.0.1",
+  "description": "Simple client for Whyd.com API",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrienjoly/npm-whyd"
+  },
+  "keywords": [
+    "whyd",
+    "api"
+  ],
+  "author": "Adrien Joly, Whyd",
+  "bugs": {
+    "url": "https://github.com/adrienjoly/npm-whyd/issues"
+  },
+  "homepage": "https://github.com/adrienjoly/npm-whyd"
+}
