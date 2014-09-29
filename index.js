@@ -26,9 +26,9 @@ function get(url, options, callback) {
             } catch(e){};
             callback(null, data, res);
         });
-    }).on('error', function(err){
-        callback(err);
-    }).end();
+    })
+    .on('error', callback)
+    .end();
 }
 
 function WhydAPI(){
@@ -39,19 +39,19 @@ WhydAPI.prototype.login = function(email, md5, cb){
     var self = this;
     get(WHYD_ROOT + "/login?action=login&ajax=1&email="+email+"&md5="+md5, {}, function(err, data, res){
         self.cookie = res.headers["set-cookie"];
-        cb && cb(err ? {error:err} : {ok:!!self.cookie});
+        cb && cb(err, !!self.cookie);
     });
 }
 
 WhydAPI.prototype.get = function(path, params, cb){
     get(WHYD_ROOT + path, {cookie:this.cookie}, function(err, json){
-        cb && cb(err ? {error:err} : json);
+        cb && cb(err, json);
     });
 }
 
 WhydAPI.prototype.logout = function(cb){
     get(WHYD_ROOT + "/login?action=logout", {cookie:this.cookie}, function(err, json){
-        cb && cb(err ? {error:err} : json);
+        cb && cb(err, json);
     });
 }
 
