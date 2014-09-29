@@ -40,7 +40,7 @@ function WhydAPI(options){
 WhydAPI.prototype.login = function(email, md5, cb){
     var self = this;
     get(this.root + "/login?action=login&ajax=1&email="+email+"&md5="+md5, {}, function(err, data, res){
-        self.cookie = res.headers["set-cookie"];
+        self.cookie = res && res.headers["set-cookie"];
         cb && cb(err, !!self.cookie);
     });
 }
