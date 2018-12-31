@@ -1,10 +1,11 @@
 # Openwhyd API Client
 
-A simple Node.js API client for Openwhyd.
+A simple Node.js API client for [Openwhyd.org](https://openwhyd.org).
 
-- Openwhyd: https://openwhyd.org
-- Source code: https://github.com/openwhyd/openwhyd
-- API documentation: https://openwhyd.github.io/openwhyd/API
+Your can use it to:
+- initiate a cookie-based Openwhyd user session, given their email address and password;
+- make authenticated calls to [Openwhyd's API endpoints](https://openwhyd.github.io/openwhyd/API);
+- end the user session.
 
 ## Usage
 
@@ -33,3 +34,15 @@ openwhydAPI.login(creds.email, creds.md5, function (err, res) {
     });
 });
 ```
+
+## Methods
+
+The class exported from the package provides the following methods:
+
+- `login (email, md5, callback)`
+- `get (path, params, callback)`
+- `logout (callback)`
+
+All `callback` functions are called with `(err, res)` as parameters.
+
+Each instance of the class holds the cookie that identifies the user session initiated with that instance.
