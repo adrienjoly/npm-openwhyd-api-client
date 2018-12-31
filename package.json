@@ -1,22 +1,23 @@
 {
-  "name": "whyd",
-  "version": "0.1.2",
-  "description": "Simple client for Whyd.com API",
+  "name": "openwhyd-api-client",
+  "version": "1.0.0",
+  "description": "Simple API client for Openwhyd.org",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adrienjoly/npm-whyd"
+    "url": "https://github.com/adrienjoly/npm-openwhyd-api-client"
   },
   "keywords": [
+    "openwhyd",
     "whyd",
     "api"
   ],
-  "author": "Adrien Joly, Whyd",
+  "author": "Adrien Joly",
   "bugs": {
-    "url": "https://github.com/adrienjoly/npm-whyd/issues"
+    "url": "https://github.com/adrienjoly/npm-openwhyd-api-client/issues"
   },
-  "homepage": "https://github.com/adrienjoly/npm-whyd"
+  "homepage": "https://github.com/adrienjoly/npm-openwhyd-api-client"
 }
